@@ -1,0 +1,15 @@
+2020-03-23 15:13:10:611 [Appium] Welcome to Appium v1.16.0
+2020-03-23 15:13:10:612 [Appium] Non-default server args:
+2020-03-23 15:13:10:613 [Appium]   port: 4801
+2020-03-23 15:13:10:613 [Appium]   bootstrapPort: 4901
+2020-03-23 15:13:10:614 [Appium]   sessionOverride: true
+2020-03-23 15:13:10:614 [Appium]   logFile: ../log/logs/appium.log
+2020-03-23 15:13:10:615 [Appium]   udid: R58MB0Z4WCX
+2020-03-23 15:13:10:615 [Appium]   noReset: true
+2020-03-23 15:13:10:615 [Appium] Deprecated server args:
+2020-03-23 15:13:10:616 [Appium]   -U,--udid => --default-capabilities '{"udid":"R58MB0Z4WCX"}'
+2020-03-23 15:13:10:616 [Appium]   --no-reset => --default-capabilities '{"noReset":true}'
+2020-03-23 15:13:10:617 [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+2020-03-23 15:13:10:617 [Appium]   udid: R58MB0Z4WCX
+2020-03-23 15:13:10:617 [Appium]   noReset: true
+2020-03-23 15:13:10:647 [Appium] Appium REST http interface listener started on 0.0.0.0:4801

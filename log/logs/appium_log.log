@@ -1,0 +1,147 @@
+__init__.py
+command.py
+port.py
+start_appium_server.py
+List of devices attached
+
+List of devices attached
+R58MB0Z4WCX	device
+
+List of devices attached
+R58MB0Z4WCX	device
+
+  501 13208 13206   0 11:09od ??         0:00.01 /bin/sh -c ps -ef | grep node
+  501 13211 13208   0 11:09od ??         0:00.00 grep node
+usage: /usr/local/bin/appium [-h] [-v] [--shell] [--allow-cors] [--reboot]
+                             [--ipa IPA] [-a ADDRESS] [-p PORT] [-pa BASEPATH]
+                             [-ca CALLBACKADDRESS] [-cp CALLBACKPORT]
+                             [-bp BOOTSTRAPPORT] [-r BACKENDRETRIES]
+                             [--session-override] [-l] [-g LOGFILE]
+                             [--log-level {info,info:debug,info:info,info:warn,info:error,warn,warn:debug,warn:info,warn:warn,warn:error,error,error:debug,error:info,error:warn,error:error,debug,debug:debug,debug:info,debug:warn,debug:error}]
+                             [--log-timestamp] [--local-timezone]
+                             [--log-no-colors] [-G WEBHOOK] [--safari]
+                             [--default-device] [--force-iphone]
+                             [--force-ipad]
+                             [--tracetemplate AUTOMATIONTRACETEMPLATEPATH]
+                             [--instruments INSTRUMENTSPATH]
+                             [--nodeconfig NODECONFIG] [-ra ROBOTADDRESS]
+                             [-rp ROBOTPORT]
+                             [--chromedriver-port CHROMEDRIVERPORT]
+                             [--chromedriver-executable CHROMEDRIVEREXECUTABLE]
+                             [--show-config] [--no-perms-check]
+                             [--strict-caps] [--isolate-sim-device]
+                             [--tmp TMPDIR] [--trace-dir TRACEDIR]
+                             [--debug-log-spacing]
+                             [--suppress-adb-kill-server] [--long-stacktrace]
+                             [--webkit-debug-proxy-port WEBKITDEBUGPROXYPORT]
+                             [--webdriveragent-port WDALOCALPORT]
+                             [-dc DEFAULTCAPABILITIES] [--relaxed-security]
+                             [--allow-insecure ALLOWINSECURE]
+                             [--deny-insecure DENYINSECURE]
+                             [--command-timeout DEFAULTCOMMANDTIMEOUT] [-k]
+                             [--platform-name PLATFORMNAME]
+                             [--platform-version PLATFORMVERSION]
+                             [--automation-name AUTOMATIONNAME]
+                             [--device-name DEVICENAME]
+                             [--browser-name BROWSERNAME] [--app APP]
+                             [-lt LAUNCHTIMEOUT] [--language LANGUAGE]
+                             [--locale LOCALE] [-U UDID]
+                             [--orientation ORIENTATION] [--no-reset]
+                             [--full-reset] [--app-pkg APPPACKAGE]
+                             [--app-activity APPACTIVITY]
+                             [--app-wait-package APPWAITPACKAGE]
+                             [--app-wait-activity APPWAITACTIVITY]
+                             [--device-ready-timeout DEVICEREADYTIMEOUT]
+                             [--android-coverage ANDROIDCOVERAGE] [--avd AVD]
+                             [--avd-args AVDARGS] [--use-keystore]
+                             [--keystore-path KEYSTOREPATH]
+                             [--keystore-password KEYSTOREPASSWORD]
+                             [--key-alias KEYALIAS]
+                             [--key-password KEYPASSWORD]
+                             [--intent-action INTENTACTION]
+                             [--intent-category INTENTCATEGORY]
+                             [--intent-flags INTENTFLAGS]
+                             [--intent-args OPTIONALINTENTARGUMENTS]
+                             [--dont-stop-app-on-reset]
+                             [--calendar-format CALENDARFORMAT]
+                             [--native-instruments-lib] [--keep-keychains]
+                             [--localizable-strings-dir LOCALIZABLESTRINGSDIR]
+                             [--show-ios-log] [--async-trace]
+                             
+/usr/local/bin/appium: error: Unrecognized arguments: device.
+  501 13233 13231   0 11:11od ??         0:00.01 /bin/sh -c ps -ef | grep node
+  501 13236 13233   0 11:11od ??         0:00.00 grep node
+usage: /usr/local/bin/appium [-h] [-v] [--shell] [--allow-cors] [--reboot]
+                             [--ipa IPA] [-a ADDRESS] [-p PORT] [-pa BASEPATH]
+                             [-ca CALLBACKADDRESS] [-cp CALLBACKPORT]
+                             [-bp BOOTSTRAPPORT] [-r BACKENDRETRIES]
+                             [--session-override] [-l] [-g LOGFILE]
+                             [--log-level {info,info:debug,info:info,info:warn,info:error,warn,warn:debug,warn:info,warn:warn,warn:error,error,error:debug,error:info,error:warn,error:error,debug,debug:debug,debug:info,debug:warn,debug:error}]
+                             [--log-timestamp] [--local-timezone]
+                             [--log-no-colors] [-G WEBHOOK] [--safari]
+                             [--default-device] [--force-iphone]
+                             [--force-ipad]
+                             [--tracetemplate AUTOMATIONTRACETEMPLATEPATH]
+                             [--instruments INSTRUMENTSPATH]
+                             [--nodeconfig NODECONFIG] [-ra ROBOTADDRESS]
+                             [-rp ROBOTPORT]
+                             [--chromedriver-port CHROMEDRIVERPORT]
+                             [--chromedriver-executable CHROMEDRIVEREXECUTABLE]
+                             [--show-config] [--no-perms-check]
+                             [--strict-caps] [--isolate-sim-device]
+                             [--tmp TMPDIR] [--trace-dir TRACEDIR]
+                             [--debug-log-spacing]
+                             [--suppress-adb-kill-server] [--long-stacktrace]
+                             [--webkit-debug-proxy-port WEBKITDEBUGPROXYPORT]
+                             [--webdriveragent-port WDALOCALPORT]
+                             [-dc DEFAULTCAPABILITIES] [--relaxed-security]
+                             [--allow-insecure ALLOWINSECURE]
+                             [--deny-insecure DENYINSECURE]
+                             [--command-timeout DEFAULTCOMMANDTIMEOUT] [-k]
+                             [--platform-name PLATFORMNAME]
+                             [--platform-version PLATFORMVERSION]
+                             [--automation-name AUTOMATIONNAME]
+                             [--device-name DEVICENAME]
+                             [--browser-name BROWSERNAME] [--app APP]
+                             [-lt LAUNCHTIMEOUT] [--language LANGUAGE]
+                             [--locale LOCALE] [-U UDID]
+                             [--orientation ORIENTATION] [--no-reset]
+                             [--full-reset] [--app-pkg APPPACKAGE]
+                             [--app-activity APPACTIVITY]
+                             [--app-wait-package APPWAITPACKAGE]
+                             [--app-wait-activity APPWAITACTIVITY]
+                             [--device-ready-timeout DEVICEREADYTIMEOUT]
+                             [--android-coverage ANDROIDCOVERAGE] [--avd AVD]
+                             [--avd-args AVDARGS] [--use-keystore]
+                             [--keystore-path KEYSTOREPATH]
+                             [--keystore-password KEYSTOREPASSWORD]
+                             [--key-alias KEYALIAS]
+                             [--key-password KEYPASSWORD]
+                             [--intent-action INTENTACTION]
+                             [--intent-category INTENTCATEGORY]
+                             [--intent-flags INTENTFLAGS]
+                             [--intent-args OPTIONALINTENTARGUMENTS]
+                             [--dont-stop-app-on-reset]
+                             [--calendar-format CALENDARFORMAT]
+                             [--native-instruments-lib] [--keep-keychains]
+                             [--localizable-strings-dir LOCALIZABLESTRINGSDIR]
+                             [--show-ios-log] [--async-trace]
+                             
+/usr/local/bin/appium: error: Unrecognized arguments: device.
+  501 13270 13268   0 11:13od ??         0:00.00 /bin/sh -c ps -ef | grep node
+  501 13273 13270   0 11:13od ??         0:00.00 grep node
+[35m[Appium][39m Welcome to Appium v1.16.0
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m   port: 4801
+[35m[Appium][39m   bootstrapPort: 4901
+[35m[Appium][39m   sessionOverride: true
+[35m[Appium][39m   logFile: ../log/logs/appium.log
+[35m[Appium][39m   udid: R58MB0Z4WCX
+[35m[Appium][39m   noReset: true
+[35m[Appium][39m Deprecated server args:
+[35m[Appium][39m   [31m-U,--udid[39m => --default-capabilities '{"udid":"R58MB0Z4WCX"}'
+[35m[Appium][39m   [31m--no-reset[39m => --default-capabilities '{"noReset":true}'
+[35m[Appium][39m Default capabilities, which will be added to each request unless overridden by desired capabilities:
+[35m[Appium][39m   udid: R58MB0Z4WCX
+[35m[Appium][39m   noReset: true
+[35m[Appium][39m Appium REST http interface listener started on 0.0.0.0:4801

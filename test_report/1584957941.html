@@ -200,9 +200,9 @@ function showOutput(id, name) {
 --></script>
 <div class='heading'>
 <h1>测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-03-22 23:13:56</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:29.330799</p>
-<p class='attribute'><strong>Status:</strong> Pass 1 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-03-23 18:05:41</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:41.833281</p>
+<p class='attribute'><strong>Status:</strong> Pass 1 Error 1</p>
 
 <p class='description'>测试首页和实况页面</p>
 </div>
@@ -241,33 +241,30 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='errorClass'>
     <td>test_weather_condition.TestWeatherCondition</td>
     <td>2</td>
     <td>1</td>
-    <td>1</td>
     <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>test_temp_equal</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_temp_equal</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
-    <div id='div_ft1.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: 11° 11
-Traceback (most recent call last):
-  File "/Users/qing.li/PycharmProjects/moji_ui_app/test_case/test_weather_condition.py", line 19, in test_temp_equal
-    self.assertTrue(self.weather_condition_business.compare_temp())
-AssertionError: False is not true
+pt1.1: heello
+./static/picture_fail/test_temp_equal_fail.png
 
 
         </pre>
@@ -276,21 +273,42 @@ AssertionError: False is not true
     </td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_weather_desc_equal</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_weather_desc_equal</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        pass</a>
-    <div id='div_pt1.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+    <div id='div_ft1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.2: 晴
-晴
+ft1.2: Traceback (most recent call last):
+  File "/Users/qing.li/PycharmProjects/moji_ui_app/test_case/test_weather_condition.py", line 17, in test_weather_desc_equal
+    self.assertTrue(self.weather_condition_business.compare_weather())
+  File "/Users/qing.li/PycharmProjects/moji_ui_app/bussiness/weather_compare_bussiness.py", line 25, in compare_weather
+    self.weather_handle.click_condition_area()
+  File "/Users/qing.li/PycharmProjects/moji_ui_app/handle/weather_handle.py", line 32, in click_condition_area
+    WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of(self.condition_page.get_condition_weather()))
+  File "/Users/qing.li/PycharmProjects/moji_ui_app/page/condition_page.py", line 16, in get_condition_weather
+    return self.driver.find_element_by_id("com.moji.mjweather:id/wc_weather_desc")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/webdriver.py", line 284, in find_element
+    'value': value})['value']
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/errorhandler.py", line 29, in check_response
+    raise wde
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
 
 
         </pre>
@@ -303,8 +321,8 @@ pt1.2: 晴
     <td>Total</td>
     <td>2</td>
     <td class="text text-success">1</td>
-    <td class="text text-danger">1</td>
-    <td class="text text-warning">0</td>
+    <td class="text text-danger">0</td>
+    <td class="text text-warning">1</td>
     <td>&nbsp;</td>
 </tr>
 </table>
@@ -315,7 +333,7 @@ pt1.2: 晴
 var data = [
 	{   
 	    name: 'error',
-		value: 0,
+		value: 1,
 		color: "#D35400",
 		label: "Error",
 		labelColor: 'white',
@@ -323,7 +341,7 @@ var data = [
 	},
 	{
 	    name: 'fail',
-		value : 1,
+		value : 0,
 		color : "#D4AC0D",
 		label: "Fail",
 		labelColor: 'white',

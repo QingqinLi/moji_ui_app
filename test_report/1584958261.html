@@ -200,8 +200,8 @@ function showOutput(id, name) {
 --></script>
 <div class='heading'>
 <h1>测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-03-22 23:10:03</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:30.834599</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-03-23 18:11:01</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:30.941156</p>
 <p class='attribute'><strong>Status:</strong> Pass 2</p>
 
 <p class='description'>测试首页和实况页面</p>
@@ -252,7 +252,25 @@ function showOutput(id, name) {
 
 <tr id='pt1.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_temp_equal</div></td>
-    <td colspan='5' align='center'>pass</td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: heello
+./static/picture_fail/test_temp_equal_1584958280_fail.png
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
 </tr>
 
 <tr id='pt1.2' class='hiddenRow'>
@@ -269,7 +287,6 @@ function showOutput(id, name) {
         <pre>
         
 pt1.2: 晴
-晴
 
 
         </pre>
