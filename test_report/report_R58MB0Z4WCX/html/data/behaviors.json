@@ -1,0 +1,29 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_weather_desc_equal",
+    "uid" : "9bbaee90d80a51e4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1585397961446,
+      "stop" : 1585397969957,
+      "duration" : 8511
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_temp_equal",
+    "uid" : "172c289eb461d1ea",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1585397984808,
+      "stop" : 1585397993789,
+      "duration" : 8981
+    },
+    "flaky" : true,
+    "parameters" : [ ]
+  } ]
+}

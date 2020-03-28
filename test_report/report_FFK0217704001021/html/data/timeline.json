@@ -1,0 +1,37 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "liqingMacBook-Pro.local",
+    "children" : [ {
+      "name" : "41645-Thread-3",
+      "children" : [ {
+        "name" : "test_temp_equal",
+        "uid" : "cddfb11fd94c5bc9",
+        "parentUid" : "d31bce166020e59c67e031339abf0aad",
+        "status" : "failed",
+        "time" : {
+          "start" : 1585397979876,
+          "stop" : 1585397991279,
+          "duration" : 11403
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_weather_desc_equal",
+        "uid" : "4ae46c76e8294a9a",
+        "parentUid" : "d31bce166020e59c67e031339abf0aad",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585397955220,
+          "stop" : 1585397964168,
+          "duration" : 8948
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d31bce166020e59c67e031339abf0aad"
+    } ],
+    "uid" : "8745916120b7669e0c985fab0c6a88ea"
+  } ]
+}

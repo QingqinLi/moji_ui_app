@@ -1,0 +1,21 @@
+[ {
+  "uid" : "4ae46c76e8294a9a",
+  "name" : "test_weather_desc_equal",
+  "time" : {
+    "start" : 1585397955220,
+    "stop" : 1585397964168,
+    "duration" : 8948
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cddfb11fd94c5bc9",
+  "name" : "test_temp_equal",
+  "time" : {
+    "start" : 1585397979876,
+    "stop" : 1585397991279,
+    "duration" : 11403
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

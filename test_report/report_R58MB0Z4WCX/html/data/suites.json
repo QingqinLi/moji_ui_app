@@ -1,0 +1,41 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_case",
+    "children" : [ {
+      "name" : "test_weather_condition",
+      "children" : [ {
+        "name" : "TestWeatherCondition",
+        "children" : [ {
+          "name" : "test_weather_desc_equal",
+          "uid" : "9bbaee90d80a51e4",
+          "parentUid" : "1ab13547eee38cc421c1752bf0bd9d07",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585397961446,
+            "stop" : 1585397969957,
+            "duration" : 8511
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_temp_equal",
+          "uid" : "172c289eb461d1ea",
+          "parentUid" : "1ab13547eee38cc421c1752bf0bd9d07",
+          "status" : "failed",
+          "time" : {
+            "start" : 1585397984808,
+            "stop" : 1585397993789,
+            "duration" : 8981
+          },
+          "flaky" : true,
+          "parameters" : [ ]
+        } ],
+        "uid" : "1ab13547eee38cc421c1752bf0bd9d07"
+      } ],
+      "uid" : "e3ed3477d78d5be4646e645faefa2a20"
+    } ],
+    "uid" : "86abcc46617c603d802c3e378b13740e"
+  } ]
+}

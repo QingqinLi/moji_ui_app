@@ -1,4 +1,8 @@
 user_info_0:
   bp: 4901
-  device_name: R58MB0Z4WCX
+  device_name: FFK0217704001021
   port: 4801
+user_info_1:
+  bp: 4902
+  device_name: R58MB0Z4WCX
+  port: 4802
