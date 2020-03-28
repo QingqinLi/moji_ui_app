@@ -1,5 +1,5 @@
 ./static/picture_fail/*.png
-./log/logs/*.log
+log/logs/*.log
 ./test_report/*.html
 *.pyc
 *.png

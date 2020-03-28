@@ -59,11 +59,12 @@ class RunTest:
                      "--self-contained-html",
                      "--alluredir="+allure_reports,
                      "--reruns", rerun])
-        cmd = "allure generate "+allure_reports+" -o "+allure_report + " --clean"
+        # 报告集成使用jenkins的allure包完成
+        # cmd = "allure generate "+allure_reports+" -o "+allure_report + " --clean"
         # 等待3s，确保html报告生成成功
         time.sleep(3)
         self.email.send_email(html_report)
-        self.command.execute_cmd(cmd)
+        # self.command.execute_cmd(cmd)
         print("第{}个线程结束执行".format(i))
 
         # l.release()
