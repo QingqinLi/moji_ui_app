@@ -48,7 +48,7 @@ class RunTest:
         time_stamp = str(int(time.time()))
         html_report = Base_DIR + '/test_report/report_html/' + time_stamp + '_' + device_name + '.html'
         xml_report = Base_DIR + '/test_report/xml_report/' + time_stamp + '_' + device_name + '.xml'
-        allure_reports = Base_DIR+'/test_report/allure_reports'
+        allure_reports = Base_DIR+'/test_report/allure_reports_'+device_name
         # cmd_clean = "allure generate "+allure_reports+"/ --clean"
         # print("cmd_clean", cmd_clean)
         # self.command.execute_cmd(cmd_clean)
