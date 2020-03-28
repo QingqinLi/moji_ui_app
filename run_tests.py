@@ -48,11 +48,11 @@ class RunTest:
         time_stamp = str(int(time.time()))
         html_report = Base_DIR + '/test_report/report_html/' + time_stamp + '_' + device_name + '.html'
         xml_report = Base_DIR + '/test_report/xml_report/' + time_stamp + '_' + device_name + '.xml'
-        allure_reports = Base_DIR+'/test_report/allure_reports_'+device_name
+        allure_reports = Base_DIR+'/test_report/allure_reports'
         # cmd_clean = "allure generate "+allure_reports+"/ --clean"
         # print("cmd_clean", cmd_clean)
         # self.command.execute_cmd(cmd_clean)
-        allure_report = Base_DIR + '/test_report/report_'+device_name+'/html/'
+        # allure_report = Base_DIR + '/test_report/report_'+device_name+'/html/'
         pytest.main(["-s", "-v", test_dir,
                      "--html="+html_report,
                      # "--junit-xml="+xml_report,
