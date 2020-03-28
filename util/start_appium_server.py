@@ -7,6 +7,8 @@ from util.command import Command
 from util.port import Port
 from util.write_user_command import WriteUserCommand
 import threading
+from threading import Lock
+import time
 # 开启appium服务器
 
 
@@ -16,6 +18,8 @@ class Server:
         self.port = Port()
         self.writecmd = WriteUserCommand()
         self.devices = self.get_devices()
+        self.appium_port_list = self.get_port(4800)
+        self.bootstrap_port_list = self.get_port(4900)
 
     def get_devices(self):
         """
@@ -34,34 +38,31 @@ class Server:
         port_list = self.port.create_port_list(start_port, len(self.devices))
         return port_list
 
-    def create_server_list(self):
-        command_list = []
-        appium_port_list = self.get_port(4800)
-        bootstrap_port_list = self.get_port(4900)
-        for i in range(len(self.devices)):
-            command = "appium -p " + str(appium_port_list[i]) + " -bp " + str(bootstrap_port_list[i]) + \
-                " -U " + str(self.devices[i]) + " --no-reset --session-override --log ../log/logs/appium.log"
-            command_list.append(command)
-            self.writecmd.write_data(i, self.devices[i], appium_port_list[i], bootstrap_port_list[i])
-            # 把port和devices的对应关系写进配置文件中去
-        return command_list
+    def create_server_list(self, i):
+        command = "appium -p " + str(self.appium_port_list[i]) + " -bp " + str(self.bootstrap_port_list[i]) + \
+            " -U " + str(self.devices[i]) + " --no-reset --session-override --log ../log/logs/appium.log"
+        self.writecmd.write_data(i, self.devices[i], self.appium_port_list[i], self.bootstrap_port_list[i])
+        # 把port和devices的对应关系写进配置文件中去
+        return command
 
-    def start_server(self, i):
+    def start_server(self, i, l):
         """
         开启appium服务
         :return:
         """
-        appium_command = self.create_server_list()[i]
-        print("appium_command", appium_command)
+        l.acquire()
+        appium_command = self.create_server_list(i)
         self.cmd.execute_cmd(appium_command)
+        l.release()
 
     def kill_server(self):
         # 查看当前node服务器是否有相应进程
-        server_list = self.cmd.execute_cmd("ps -ef | grep node")
+        server_list = self.cmd.execute_command_result("ps -ef | grep node")
         if server_list:
             self.cmd.execute_cmd("killall node")
+        time.sleep(2)
 
-    def main(self):
+    def start(self):
         """
         多线程启动appim
         :return:
@@ -69,15 +70,16 @@ class Server:
         self.kill_server()
         self.writecmd.clear_data()
         appium_list = []
+        l = Lock()
         for i in range(len(self.devices)):
-            appium_t = threading.Thread(target=self.start_server, args=(i,))
+            appium_t = threading.Thread(target=self.start_server, args=(i, l))
             appium_list.append(appium_t)
         [i.start() for i in appium_list]
 
 
-if __name__ == '__main__':
-    s = Server()
-    print(s.main())
+# if __name__ == '__main__':
+#     s = Server()
+#     print(s.start())
 
 
 

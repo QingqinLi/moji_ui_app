@@ -5,22 +5,44 @@ __author__ = 'qing.li'
 """
 from common.all_test import AllTest
 from bussiness.weather_compare_bussiness import WeatherCompareBusiness
-import unittest
+import pytest
 from log.log import Logger
 from common.save_fail_picture import get_screen_shot
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from page.weather_page import WeatherPage
 
 
-class TestWeatherCondition(AllTest):
+class TestWeatherCondition:
 
-    def test_weather_desc_equal(self):
-        self.weather_condition_business = WeatherCompareBusiness(self.driver)
-        self.assertTrue(self.weather_condition_business.compare_weather())
+    # def setup(self):
+    #     browser.launch_app()
+    # #     WebDriverWait(self.driver, 20, 1).until(EC.visibility_of(WeatherPage(self.driver).get_condition()))
+    #
+    # def teardown(self):
+    #     browser.close_app()
+    @classmethod
+    def teardown_class(cls):
+        print('hihihihi')
 
-    @get_screen_shot
-    def test_temp_equal(self):
-        self.weather_condition_business = WeatherCompareBusiness(self.driver)
-        self.assertTrue(self.weather_condition_business.compare_temp())
+    # @pytest.mark.skip
+    def test_weather_desc_equal(self, browser):
+        """
+        judge weather_desc in main page and condition page
+        :param browser:
+        :return:
+        """
+        self.weather_condition_business = WeatherCompareBusiness(browser)
+        print("hello")
+        assert self.weather_condition_business.compare_weather()
+
+    # @pytest.mark.flaky(reruns=1, reruns_delay=1)
+    # @pytest.mark.skip
+    def test_temp_equal(self, browser):
+        self.weather_condition_business = WeatherCompareBusiness(browser)
+        result = self.weather_condition_business.compare_temp()
+        assert result
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()

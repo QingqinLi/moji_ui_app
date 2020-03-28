@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="3" failures="0" hostname="liqingMacBook-Pro.local" name="pytest" skipped="0" tests="3" time="28.205" timestamp="2020-03-25T21:18:54.307174"><testcase classname="test_case.test_weather_condition.TestWeatherCondition" file="test_case/test_weather_condition.py" line="28" name="test_weather_desc_equal" time="20.694"><error message="test setup failure">cls = &lt;class &apos;_pytest.runner.CallInfo&apos;&gt;
+func = &lt;function call_runtest_hook.&lt;locals&gt;.&lt;lambda&gt; at 0x109c9a950&gt;
+when = &apos;setup&apos;
+reraise = (&lt;class &apos;_pytest.outcomes.Exit&apos;&gt;, &lt;class &apos;KeyboardInterrupt&apos;&gt;)
+
+    @classmethod
+    def from_call(cls, func, when, reraise=None):
+        #: context of invocation: one of &quot;setup&quot;, &quot;call&quot;,
+        #: &quot;teardown&quot;, &quot;memocollect&quot;
+        start = time()
+        excinfo = None
+        try:
+&gt;           result = func()
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:201: in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py:286: in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py:92: in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py:86: in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/nose.py:12: in pytest_runtest_setup
+    call_optional(item.parent.obj, &quot;setup&quot;)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+obj = &lt;test_case.test_weather_condition.TestWeatherCondition object at 0x109ce8080&gt;
+name = &apos;setup&apos;
+
+    def call_optional(obj, name):
+        method = getattr(obj, name, None)
+        isfixture = hasattr(method, &quot;_pytestfixturefunction&quot;)
+        if method is not None and not isfixture and callable(method):
+            # If there&apos;s any problems allow the exception to raise rather than
+            # silently ignoring them
+&gt;           method()
+E           TypeError: setup() missing 1 required positional argument: &apos;browser&apos;
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/nose.py:37: TypeError</error></testcase><testcase classname="test_case.test_weather_condition.TestWeatherCondition" file="test_case/test_weather_condition.py" line="39" name="test_temp_equal" time="0.001"><error message="test setup failure">cls = &lt;class &apos;_pytest.runner.CallInfo&apos;&gt;
+func = &lt;function call_runtest_hook.&lt;locals&gt;.&lt;lambda&gt; at 0x1099776a8&gt;
+when = &apos;setup&apos;
+reraise = (&lt;class &apos;_pytest.outcomes.Exit&apos;&gt;, &lt;class &apos;KeyboardInterrupt&apos;&gt;)
+
+    @classmethod
+    def from_call(cls, func, when, reraise=None):
+        #: context of invocation: one of &quot;setup&quot;, &quot;call&quot;,
+        #: &quot;teardown&quot;, &quot;memocollect&quot;
+        start = time()
+        excinfo = None
+        try:
+&gt;           result = func()
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:201: in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py:286: in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py:92: in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py:86: in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/nose.py:12: in pytest_runtest_setup
+    call_optional(item.parent.obj, &quot;setup&quot;)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+obj = &lt;test_case.test_weather_condition.TestWeatherCondition object at 0x109c5a0f0&gt;
+name = &apos;setup&apos;
+
+    def call_optional(obj, name):
+        method = getattr(obj, name, None)
+        isfixture = hasattr(method, &quot;_pytestfixturefunction&quot;)
+        if method is not None and not isfixture and callable(method):
+            # If there&apos;s any problems allow the exception to raise rather than
+            # silently ignoring them
+&gt;           method()
+E           TypeError: setup() missing 1 required positional argument: &apos;browser&apos;
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/nose.py:37: TypeError</error><error message="test teardown failure">cls = &lt;class &apos;_pytest.runner.CallInfo&apos;&gt;
+func = &lt;function call_runtest_hook.&lt;locals&gt;.&lt;lambda&gt; at 0x109cb9620&gt;
+when = &apos;teardown&apos;
+reraise = (&lt;class &apos;_pytest.outcomes.Exit&apos;&gt;, &lt;class &apos;KeyboardInterrupt&apos;&gt;)
+
+    @classmethod
+    def from_call(cls, func, when, reraise=None):
+        #: context of invocation: one of &quot;setup&quot;, &quot;call&quot;,
+        #: &quot;teardown&quot;, &quot;memocollect&quot;
+        start = time()
+        excinfo = None
+        try:
+&gt;           result = func()
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:201: in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py:286: in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py:92: in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py:86: in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:140: in pytest_runtest_teardown
+    item.session._setupstate.teardown_exact(item, nextitem)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:333: in teardown_exact
+    self._teardown_towards(needed_collectors)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:350: in _teardown_towards
+    raise val.with_traceback(tb)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:341: in _teardown_towards
+    self._pop_and_teardown()
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:299: in _pop_and_teardown
+    self._teardown_with_finalization(colitem)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:319: in _teardown_with_finalization
+    self._callfinalizers(colitem)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:316: in _callfinalizers
+    raise val.with_traceback(tb)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py:307: in _callfinalizers
+    fin()
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/fixtures.py:864: in finish
+    raise val.with_traceback(tb)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/fixtures.py:857: in finish
+    func()
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/fixtures.py:787: in _teardown_yield_fixture
+    next(it)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/python.py:734: in xunit_setup_class_fixture
+    _call_with_optional_argument(func, self.obj)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = &lt;function TestWeatherCondition.teardown_class at 0x1098a4f28&gt;
+arg = &lt;class &apos;test_case.test_weather_condition.TestWeatherCondition&apos;&gt;
+
+    def _call_with_optional_argument(func, arg):
+        &quot;&quot;&quot;Call the given function with the given argument if func accepts one argument, otherwise
+        calls func without arguments&quot;&quot;&quot;
+        arg_count = func.__code__.co_argcount
+        if inspect.ismethod(func):
+            arg_count -= 1
+        if arg_count:
+&gt;           func(arg)
+E           TypeError: teardown_class() missing 1 required positional argument: &apos;browser&apos;
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/python.py:668: TypeError</error></testcase></testsuite></testsuites>

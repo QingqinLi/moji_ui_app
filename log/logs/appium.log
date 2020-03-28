@@ -13,3 +13,4 @@
 2020-03-23 15:13:10:617 [Appium]   udid: R58MB0Z4WCX
 2020-03-23 15:13:10:617 [Appium]   noReset: true
 2020-03-23 15:13:10:647 [Appium] Appium REST http interface listener started on 0.0.0.0:4801
+2020-03-25 12:27:43:963 [Appium] Received SIGTERM - shutting down

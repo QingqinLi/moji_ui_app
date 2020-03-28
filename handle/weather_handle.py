@@ -30,5 +30,6 @@ class WeatherHandle:
     def click_condition_area(self):
         time.sleep(1)
         self.touch_action.tap(self.weather_page.get_condition_button()).perform()
-        WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of(self.condition_page.get_condition_weather()))
+        time.sleep(2)
+        WebDriverWait(self.driver, 20, 0.5).until(EC.visibility_of(self.condition_page.get_condition_weather()))
 

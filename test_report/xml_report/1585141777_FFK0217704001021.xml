@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="1" hostname="liqingMacBook-Pro.local" name="pytest" skipped="0" tests="2" time="58.209" timestamp="2020-03-25T21:09:38.684869"><testcase classname="test_case.test_weather_condition.TestWeatherCondition" file="test_case/test_weather_condition.py" line="24" name="test_weather_desc_equal" time="41.178"><failure message="selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.">self = &lt;test_case.test_weather_condition.TestWeatherCondition object at 0x109af0d68&gt;
+browser = &lt;appium.webdriver.webdriver.WebDriver (session=&quot;9c1a629f-28d6-4c13-9232-396a84512f35&quot;)&gt;
+
+    def test_weather_desc_equal(self, browser):
+        &quot;&quot;&quot;
+        judge weather_desc in main page and condition page
+        :param browser:
+        :return:
+        &quot;&quot;&quot;
+        browser.launch_app()
+        print(browser)
+        self.weather_condition_business = WeatherCompareBusiness(browser)
+&gt;       assert self.weather_condition_business.compare_weather()
+
+test_case/test_weather_condition.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+bussiness/weather_compare_bussiness.py:25: in compare_weather
+    self.weather_handle.click_condition_area()
+handle/weather_handle.py:33: in click_condition_area
+    WebDriverWait(self.driver, 10, 0.5).until(EC.visibility_of(self.condition_page.get_condition_weather()))
+page/condition_page.py:16: in get_condition_weather
+    return self.driver.find_element_by_id(&quot;com.moji.mjweather:id/wc_weather_desc&quot;)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py:360: in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/webdriver.py:284: in find_element
+    &apos;value&apos;: value})[&apos;value&apos;]
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py:321: in execute
+    self.error_handler.check_response(response)
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/errorhandler.py:29: in check_response
+    raise wde
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/errorhandler.py:24: in check_response
+    super(MobileErrorHandler, self).check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;appium.webdriver.errorhandler.MobileErrorHandler object at 0x108ceb828&gt;
+response = {&apos;status&apos;: 404, &apos;value&apos;: &apos;{&quot;value&quot;:{&quot;error&quot;:&quot;no such element&quot;,&quot;message&quot;:&quot;An element could not be located on the page u...ver.findElOrEls (/usr/local/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)&quot;}}&apos;}
+
+    def check_response(self, response):
+        &quot;&quot;&quot;
+        Checks that a JSON response from the WebDriver does not have an error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        &quot;&quot;&quot;
+        status = response.get(&apos;status&apos;, None)
+        if status is None or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get(&quot;message&quot;, &quot;&quot;)
+        screen = response.get(&quot;screen&quot;, &quot;&quot;)
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get(&apos;value&apos;, None)
+            if value_json and isinstance(value_json, basestring):
+                import json
+                try:
+                    value = json.loads(value_json)
+                    if len(value.keys()) == 1:
+                        value = value[&apos;value&apos;]
+                    status = value.get(&apos;error&apos;, None)
+                    if status is None:
+                        status = value[&quot;status&quot;]
+                        message = value[&quot;value&quot;]
+                        if not isinstance(message, basestring):
+                            value = message
+                            message = message.get(&apos;message&apos;)
+                    else:
+                        message = value.get(&apos;message&apos;, None)
+                except ValueError:
+                    pass
+    
+        exception_class = ErrorInResponseException
+        if status in ErrorCode.NO_SUCH_ELEMENT:
+            exception_class = NoSuchElementException
+        elif status in ErrorCode.NO_SUCH_FRAME:
+            exception_class = NoSuchFrameException
+        elif status in ErrorCode.NO_SUCH_WINDOW:
+            exception_class = NoSuchWindowException
+        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:
+            exception_class = StaleElementReferenceException
+        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:
+            exception_class = ElementNotVisibleException
+        elif status in ErrorCode.INVALID_ELEMENT_STATE:
+            exception_class = InvalidElementStateException
+        elif status in ErrorCode.INVALID_SELECTOR \
+                or status in ErrorCode.INVALID_XPATH_SELECTOR \
+                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:
+            exception_class = InvalidSelectorException
+        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:
+            exception_class = ElementNotSelectableException
+        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:
+            exception_class = ElementNotInteractableException
+        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:
+            exception_class = InvalidCookieDomainException
+        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:
+            exception_class = UnableToSetCookieException
+        elif status in ErrorCode.TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.SCRIPT_TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.UNKNOWN_ERROR:
+            exception_class = WebDriverException
+        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:
+            exception_class = UnexpectedAlertPresentException
+        elif status in ErrorCode.NO_ALERT_OPEN:
+            exception_class = NoAlertPresentException
+        elif status in ErrorCode.IME_NOT_AVAILABLE:
+            exception_class = ImeNotAvailableException
+        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:
+            exception_class = ImeActivationFailedException
+        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:
+            exception_class = MoveTargetOutOfBoundsException
+        elif status in ErrorCode.JAVASCRIPT_ERROR:
+            exception_class = JavascriptException
+        elif status in ErrorCode.SESSION_NOT_CREATED:
+            exception_class = SessionNotCreatedException
+        elif status in ErrorCode.INVALID_ARGUMENT:
+            exception_class = InvalidArgumentException
+        elif status in ErrorCode.NO_SUCH_COOKIE:
+            exception_class = NoSuchCookieException
+        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:
+            exception_class = ScreenshotException
+        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:
+            exception_class = ElementClickInterceptedException
+        elif status in ErrorCode.INSECURE_CERTIFICATE:
+            exception_class = InsecureCertificateException
+        elif status in ErrorCode.INVALID_COORDINATES:
+            exception_class = InvalidCoordinatesException
+        elif status in ErrorCode.INVALID_SESSION_ID:
+            exception_class = InvalidSessionIdException
+        elif status in ErrorCode.UNKNOWN_METHOD:
+            exception_class = UnknownMethodException
+        else:
+            exception_class = WebDriverException
+        if value == &apos;&apos; or value is None:
+            value = response[&apos;value&apos;]
+        if isinstance(value, basestring):
+            if exception_class == ErrorInResponseException:
+                raise exception_class(response, value)
+            raise exception_class(value)
+        if message == &quot;&quot; and &apos;message&apos; in value:
+            message = value[&apos;message&apos;]
+    
+        screen = None
+        if &apos;screen&apos; in value:
+            screen = value[&apos;screen&apos;]
+    
+        stacktrace = None
+        if &apos;stackTrace&apos; in value and value[&apos;stackTrace&apos;]:
+            stacktrace = []
+            try:
+                for frame in value[&apos;stackTrace&apos;]:
+                    line = self._value_or_default(frame, &apos;lineNumber&apos;, &apos;&apos;)
+                    file = self._value_or_default(frame, &apos;fileName&apos;, &apos;&lt;anonymous&gt;&apos;)
+                    if line:
+                        file = &quot;%s:%s&quot; % (file, line)
+                    meth = self._value_or_default(frame, &apos;methodName&apos;, &apos;&lt;anonymous&gt;&apos;)
+                    if &apos;className&apos; in frame:
+                        meth = &quot;%s.%s&quot; % (frame[&apos;className&apos;], meth)
+                    msg = &quot;    at %s (%s)&quot;
+                    msg = msg % (meth, file)
+                    stacktrace.append(msg)
+            except TypeError:
+                pass
+        if exception_class == ErrorInResponseException:
+            raise exception_class(response, message)
+        elif exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if &apos;data&apos; in value:
+                alert_text = value[&apos;data&apos;].get(&apos;text&apos;)
+            elif &apos;alert&apos; in value:
+                alert_text = value[&apos;alert&apos;].get(&apos;text&apos;)
+            raise exception_class(message, screen, stacktrace, alert_text)
+&gt;       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py:242: NoSuchElementException</failure></testcase><testcase time="8.804"></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/main.py&quot;, line 193, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/main.py&quot;, line 237, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 92, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 86, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/main.py&quot;, line 258, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 92, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 86, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pytest_rerunfailures.py&quot;, line 200, in pytest_runtest_protocol
+    reports = runtestprotocol(item, nextitem=nextitem, log=False)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py&quot;, line 95, in runtestprotocol
+    reports.append(call_and_report(item, &quot;call&quot;, log))
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py&quot;, line 178, in call_and_report
+    report = hook.pytest_runtest_makereport(item=item, call=call)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 92, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 86, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 203, in _multicall
+    gen.send(outcome)
+  File &quot;/Users/qing.li/PycharmProjects/moji_ui_app/conftest.py&quot;, line 30, in pytest_runtest_makereport
+    screen_img = _capture_screenshot()
+  File &quot;/Users/qing.li/PycharmProjects/moji_ui_app/conftest.py&quot;, line 45, in _capture_screenshot
+    return driver.get_screenshot_as_base64()
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py&quot;, line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)[&apos;value&apos;]
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/webdriver.py&quot;, line 321, in execute
+    self.error_handler.check_response(response)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/errorhandler.py&quot;, line 29, in check_response
+    raise wde
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/appium/webdriver/errorhandler.py&quot;, line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/remote/errorhandler.py&quot;, line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: A session is either terminated or not started</error></testcase></testsuite></testsuites>

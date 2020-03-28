@@ -24,7 +24,7 @@ class WeatherCompareBusiness:
         self.logger.debug(weather_desc)
         self.weather_handle.click_condition_area()
         condition_desc = self.condition_handle.get_weather_text()
-        print(condition_desc)
+        print(condition_desc, weather_desc)
         return weather_desc == condition_desc
 
     def compare_temp(self):
@@ -32,4 +32,5 @@ class WeatherCompareBusiness:
         self.weather_handle.click_condition_area()
         condition_temp = self.condition_handle.get_temperature_text()
         self.logger.debug(condition_temp, weather_temp)
+        print(weather_temp, condition_temp)
         return weather_temp == condition_temp

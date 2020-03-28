@@ -12,25 +12,21 @@ from page.weather_page import WeatherPage
 from common.basedriver import BaseDriver
 
 
-class AllTest(unittest.TestCase):
+class AllTest:
 
-    def __init__(self, i, methodName='runTest'):
-        super(AllTest, self).__init__(methodName)
-        self.i = i
+    # @classmethod
+    # def setup_class(cls):
+    #     cls.driver = BaseDriver().get_android_driver()
+    #     cls.driver.implicitly_wait(15)
+    #
+    # @classmethod
+    # def teardown_class(cls):
+    #     cls.driver.quit()
 
-    @classmethod
-    def setUpClass(cls):
-        cls.driver = BaseDriver().get_android_driver(cls.i)
-        cls.driver.implicitly_wait(15)
-
-    @classmethod
-    def tearDownClass(cls):
-        cls.driver.quit()
-
-    def setUp(self):
+    def setup(self):
         self.driver.launch_app()
         WebDriverWait(self.driver, 20, 1).until(EC.visibility_of(WeatherPage(self.driver).get_condition()))
 
-    def tearDown(self):
+    def teardown(self):
         self.driver.close_app()
 

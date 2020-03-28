@@ -6,6 +6,7 @@ __author__ = 'qing.li'
 # 执行操作系统命令
 import os
 import subprocess
+from config.setting import Base_DIR
 
 
 class Command:
@@ -24,7 +25,9 @@ class Command:
 
     @staticmethod
     def execute_cmd(cmd):
-        subprocess.Popen(cmd, shell=True, stdout=open('../log/logs/appium_log.log', 'a'), stderr=subprocess.STDOUT)
+        log_path = os.path.join(Base_DIR + "/log/logs/appium_log.log")
+        # print(Base_DIR, log_path)
+        subprocess.Popen(cmd, shell=True, stdout=open(log_path, 'a'), stderr=subprocess.STDOUT)
 
 
 if __name__ == '__main__':

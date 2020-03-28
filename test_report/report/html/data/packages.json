@@ -1,0 +1,57 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test_case.test_weather_condition",
+    "children" : [ {
+      "name" : "test_1",
+      "uid" : "38b70344b0552144",
+      "parentUid" : "a1cb93b3475ae68c7c95016a2d3077f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585192375014,
+        "stop" : 1585192375014,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test2",
+      "uid" : "362dca6d829215ce",
+      "parentUid" : "a1cb93b3475ae68c7c95016a2d3077f4",
+      "status" : "failed",
+      "time" : {
+        "start" : 1585192377549,
+        "stop" : 1585192377550,
+        "duration" : 1
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_weather_desc_equal",
+      "uid" : "425f91c22e237922",
+      "parentUid" : "a1cb93b3475ae68c7c95016a2d3077f4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1585238500749,
+        "stop" : 1585238509372,
+        "duration" : 8623
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_temp_equal",
+      "uid" : "e690393899727144",
+      "parentUid" : "a1cb93b3475ae68c7c95016a2d3077f4",
+      "status" : "failed",
+      "time" : {
+        "start" : 1585238526307,
+        "stop" : 1585238534677,
+        "duration" : 8370
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_case.test_weather_condition"
+  } ]
+}

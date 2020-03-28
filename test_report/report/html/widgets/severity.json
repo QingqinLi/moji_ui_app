@@ -1,0 +1,41 @@
+[ {
+  "uid" : "425f91c22e237922",
+  "name" : "test_weather_desc_equal",
+  "time" : {
+    "start" : 1585238500749,
+    "stop" : 1585238509372,
+    "duration" : 8623
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "362dca6d829215ce",
+  "name" : "test2",
+  "time" : {
+    "start" : 1585192377549,
+    "stop" : 1585192377550,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e690393899727144",
+  "name" : "test_temp_equal",
+  "time" : {
+    "start" : 1585238526307,
+    "stop" : 1585238534677,
+    "duration" : 8370
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "38b70344b0552144",
+  "name" : "test_1",
+  "time" : {
+    "start" : 1585192375014,
+    "stop" : 1585192375014,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

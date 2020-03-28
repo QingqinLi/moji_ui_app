@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="liqingMacBook-Pro.local" name="pytest" skipped="0" tests="2" time="33.098" timestamp="2020-03-25T19:14:34.614028"><testcase classname="test_case.test_weather_condition.TestWeatherCondition" file="test_case/test_weather_condition.py" line="14" name="test_weather_desc_equal" time="21.526"></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/main.py&quot;, line 193, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/main.py&quot;, line 237, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 92, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 86, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/main.py&quot;, line 258, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 92, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 86, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pytest_rerunfailures.py&quot;, line 200, in pytest_runtest_protocol
+    reports = runtestprotocol(item, nextitem=nextitem, log=False)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py&quot;, line 95, in runtestprotocol
+    reports.append(call_and_report(item, &quot;call&quot;, log))
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/_pytest/runner.py&quot;, line 178, in call_and_report
+    report = hook.pytest_runtest_makereport(item=item, call=call)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 92, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/manager.py&quot;, line 86, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pluggy/callers.py&quot;, line 203, in _multicall
+    gen.send(outcome)
+  File &quot;/Users/qing.li/PycharmProjects/moji_ui_app/conftest.py&quot;, line 27, in pytest_runtest_makereport
+    screen_img = _capture_screenshot(item.driver)
+AttributeError: &apos;Function&apos; object has no attribute &apos;driver&apos;</error></testcase></testsuite></testsuites>

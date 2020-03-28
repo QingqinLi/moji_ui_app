@@ -1,0 +1,9 @@
+"Status","Name","Duration in ms","Description"
+"passed","test_case.test_weather_condition.TestWeatherCondition#test_1","0",""
+"failed","test_case.test_weather_condition.TestWeatherCondition#test_temp_equal","8370",""
+"failed","test_case.test_weather_condition.TestWeatherCondition#test2","1",""
+"passed","test_case.test_weather_condition.TestWeatherCondition#test_weather_desc_equal","8623","
+        judge weather_desc in main page and condition page
+        :param browser:
+        :return:
+        "

@@ -4,7 +4,7 @@
 __author__ = 'qing.li'
 """
 import logging
-from common.setting import DEBUG
+from config.setting import DEBUG
 
 
 class Logger:
