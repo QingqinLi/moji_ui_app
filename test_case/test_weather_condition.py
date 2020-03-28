@@ -30,7 +30,7 @@ class TestWeatherCondition:
         print('hihihihi')
 
     # @pytest.mark.skip
-    @allure.title("test_weather_desc_equal" + device_name)
+    @allure.title("test_weather_desc_equal_" + device_name)
     def test_weather_desc_equal(self, browser):
         """
         judge weather_desc in main page and condition page
@@ -43,7 +43,7 @@ class TestWeatherCondition:
 
     # @pytest.mark.flaky(reruns=1, reruns_delay=1)
     # @pytest.mark.skip
-    @allure.title("test_temp_equal"+device_name)
+    @allure.title("test_temp_equal_"+device_name)
     def test_temp_equal(self, browser):
         self.weather_condition_business = WeatherCompareBusiness(browser)
         result = self.weather_condition_business.compare_temp()
