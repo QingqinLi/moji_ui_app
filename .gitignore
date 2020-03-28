@@ -6,3 +6,4 @@ log/logs/*.log
 *.log
 *.html
 .idea/*
+*.json

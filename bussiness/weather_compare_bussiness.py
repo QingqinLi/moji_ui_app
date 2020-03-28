@@ -33,4 +33,4 @@ class WeatherCompareBusiness:
         condition_temp = self.condition_handle.get_temperature_text()
         self.logger.debug(condition_temp, weather_temp)
         print(weather_temp, condition_temp)
-        return weather_temp == condition_temp
+        return not weather_temp == condition_temp
